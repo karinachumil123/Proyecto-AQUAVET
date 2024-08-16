@@ -1,0 +1,100 @@
+.wrapper{
+    display: flex;
+    height: 100vh;
+    border-radius: 0px 10px 10px 0;
+    background-color: #5183C0;
+    padding: 15px 10px;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        .logo{
+            font-family: 'PoppinsBold';
+            color: black;
+            font-size: 0.97rem;
+        }
+
+        .container-infoPerfil{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 35px;
+            .wrapper-img{
+                .img{
+                    width: 40px;
+                    opacity: 0.5;
+                }
+            }
+            
+            .name{
+                color: #EFF0F4;
+                font-family: 'PoppinsSemiBold';
+                font-size: 0.85rem;
+            }
+
+            .puesto{
+                color: #E2DEF2;
+                font-family: 'PoppinsMedium';
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .wrapper-menus{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-top: 20px;
+
+        .wrapper-menu{
+            padding: 5px 10px;
+            background-color: #568DCF;
+            border-radius: 10px;
+
+            .titiloMenu{
+                color: #234d80;
+                font-family: 'PoppinsBold';
+                font-size: 0.75rem;
+            }
+
+            .navbar-nav{
+                list-style-type: none;
+                .nav-item{
+                    padding: 8px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-family: 'PoppinsMedium';
+                    color: #D2D8EB;
+                    font-size: 0.92rem;
+                    
+                    width: 100%;
+                    .nav-link{
+                        width: 100%;
+                        text-decoration: none;
+                        font-family: 'PoppinsMedium';
+                        color: #D2D8EB;
+                        font-size: 0.92rem;
+                        padding: 8px;
+                        border-radius: 5px;
+                    }
+                    .active{
+                        background-color: #F5F8FF;
+                        color: #5D7599;
+                        font-family: 'PoppinsSemiBold';
+
+                    }
+                }
+            }
+        }
+    }
+    .cerrarSession{
+        color: #DEE6EA;
+        font-family: 'PoppinsMedium';
+        font-size: 0.83rem;
+        cursor: pointer;
+    }
+}

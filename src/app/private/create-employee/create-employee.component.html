@@ -1,0 +1,113 @@
+<h2 mat-dialog-title>Registrar empleado</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="example-form" [formGroup]="registerEmployeeForm" (ngSubmit)="onSubmit()">
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Primer Nombre</mat-label>
+                        <input formControlName="primerNombre" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Segundo Nombre</mat-label>
+                        <input  formControlName="segundoNombre" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Otros Nombres</mat-label>
+                        <input formControlName="otrosNombres" matInput>
+                    </mat-form-field></td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Primer Apellido</mat-label>
+                        <input  formControlName="primerApellido" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Segundo Apellido</mat-label>
+                        <input  formControlName="segundoApellido" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label type="tel">Telefono</mat-label>
+                        <input  formControlName="telefono" matInput>
+                    </mat-form-field></td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Correo electronico</mat-label>
+                        <input formControlName="email" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Fecha de nacimiento</mat-label>
+                        <input  formControlName="fNacimiento" matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker">
+                            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+
+                    </mat-form-field></td>
+            </tr>
+        </table>
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Direccion</mat-label>
+                        <input formControlName="direccion" matInput>
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Genero</mat-label>
+                        <mat-select  formControlName="genero" disableRipple>
+                            <mat-option value="M">Masculino</mat-option>
+                            <mat-option value="F">Femenino</mat-option>
+                        </mat-select>
+
+                    </mat-form-field></td>
+            </tr>
+        </table>
+
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Salario</mat-label>
+                        <input  formControlName="salario" matInput type="number">
+                    </mat-form-field></td>
+                <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Puesto</mat-label>
+                        <mat-select formControlName="puesto" disableRipple>
+                            <ng-template ngFor let-puesto [ngForOf]="listPuestos">
+                                <mat-option value={{puesto.iD_Puesto}}>{{puesto.nombre}}</mat-option>
+                            </ng-template>
+                        </mat-select>
+                    </mat-form-field></td>
+
+                    <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Estado</mat-label>
+                        <mat-select formControlName="estado" disableRipple>
+                            <ng-template ngFor let-estado [ngForOf]="listEstadosEmpleados">
+                                <mat-option value={{estado.iD_Estado}}>{{estado.nombre}}</mat-option>
+                            </ng-template>
+                        </mat-select>
+                    </mat-form-field></td>
+            </tr>
+        </table>
+
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button type="submit"  mat-button [mat-dialog-close]="true" cdkFocusInitial class="btn-registrar">Registrar</button>
+        </mat-dialog-actions>
+
+    </form>
+</mat-dialog-content>

@@ -1,0 +1,77 @@
+.container-xxl{
+    height: 100vh;
+
+    .contendor-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .Wrapperparrafo{
+            color: #007EA7;
+            font-size: 33px;
+            font-family: "PoppinsRegular";
+            width: 100%;
+            .veterinariaL{
+                color: #007EA7;
+                font-size: 14px;   
+                font-family: "PoppinsBold";
+            }
+            .juntosL{
+                font-size: 55px; 
+                font-family: "PoppinsBold";
+                display: flex;
+                align-items: center;
+                .icon-pet{
+                    width: 60px;
+                }
+            }
+            .parrafo{
+                font-size: 1.5rem;
+            }
+        }
+
+        .imagen{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            .img-back{
+                width: 90%;
+            }
+        }
+
+
+    }
+
+    .wrapper-btn{
+        margin-top: 20px;
+        .botonServicio{
+            background-color: #1f76b4;
+            color: aliceblue;
+            padding: 9px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            font-family: "PoppinsSemiBold";
+            text-decoration: none;
+            display: inline-block;
+        }
+    }
+
+    .botonServicio:hover{
+        background-color: #084977;
+        transform: scale(1.03);
+
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+}
+
+
+
+
+

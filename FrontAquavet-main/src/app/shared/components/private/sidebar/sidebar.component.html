@@ -1,0 +1,48 @@
+<div class="wrapper" >
+
+
+    <div class="container">
+        <p class="logo">Aquavet</p>
+
+        <div class="container-infoPerfil">
+            <div class="wrapper-img">
+                <img class="img" src="../../../../../assets/icon/Persona.svg" alt="">
+            </div>
+
+            <div class="container-perfil">
+                <p class="name">{{userProfile?.primerNombre}}  {{userProfile?.primerApellido}}</p>
+                <p class="puesto">{{userProfile?.puesto}}</p>
+            </div>
+
+        </div>
+
+        <div class="wrapper-menus">
+            <div class="wrapper-menu">
+                <p class="titiloMenu">Citas</p>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#" routerLinkActive="active">Agendar cita</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="#" routerLinkActive="active">Calendario</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="wrapper-menu">
+                <p class="titiloMenu">Administracion</p>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/catalogo/empleados" routerLinkActive="active">Empleados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/catalogo/usuarios" routerLinkActive="active">Usuarios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p class="cerrarSession" (click)="logout()">Cerrar session</p>
+</div>

@@ -1,0 +1,53 @@
+<div class="wrapper">
+    <p class="titulo">Empleados</p>
+    <div class="container-btnAgregar">
+
+        <button class="btn-agregar" (click)="openDialogCreate()">
+            Nuevo empleado
+        </button>
+
+    </div>
+
+    <div class="container-btns">
+        <div class="btns">
+            <button class="btn-reporte">Reportes</button>
+            <div class="input-search">
+                <input type="text">
+                <img src="../../../assets/icon/iconSearch.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-serviciosInfo">
+        <div class="wrapper-titulesServices wrapper-tableServices">
+            <p>ID</p>
+            <p>Nombre</p>
+            <p>Puesto</p>
+            <p>Acceso al sistema</p>
+            <p>Estado</p>
+            <p>Elimnar</p>
+            <p>Editar</p>
+        </div>
+
+        <div class="wrapper-infroServicios">
+
+            <ng-template ngFor let-employee [ngForOf]="employees">
+                <div class="wrapper-infoServicio wrapper-tableServices">
+                    <p>{{employee.iD_Empleado}}</p>
+                    <p>{{employee.primer_Nombre}} {{employee.primer_Apellido}}</p>
+                    <p>{{employee.puesto}}</p>
+                    <p>{{employee.isUser ? 'SI' : 'NO'}}</p>
+                    <p>{{employee.estadoEmpleado}}</p>
+
+                    
+                    <app-btn-eliminar (click)="deleteEmployee(employee.iD_Empleado)"></app-btn-eliminar>
+                    <app-btn-editar (click)="editEmployee(employee.iD_Empleado)"></app-btn-editar>
+                    
+                </div>
+            </ng-template>
+        </div>
+    </div>
+
+
+</div>

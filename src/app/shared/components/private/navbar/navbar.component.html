@@ -1,0 +1,26 @@
+<div class="positionFixed ">
+    <nav class="wrapper container-xxl">
+
+        <div class="wrapperLogo">
+        </div>
+
+
+        <div class="navbar-nav">
+            <li class="wrapper-perfil">
+                <div class="wrapper-img">
+                    <img class="img" src="../../../../../assets/icon/Persona.svg" alt="">
+                </div>
+
+                <div class="wrapper-info">
+                    <p class="name">{{userProfile?.primerNombre}} {{userProfile?.primerApellido}}</p>
+                    <p class="role">{{userProfile?.puesto}}</p>
+                </div>
+            </li>
+
+            <p class="nav-item" (click)="logout()">
+                Cerrar Session
+            </p>
+        </div>
+        
+    </nav>
+</div>

@@ -1,0 +1,65 @@
+<h2 mat-dialog-title>Agregar un usuario al sistema</h2>
+<mat-dialog-content class="mat-typography">
+    <form class="example-form" [formGroup]="registerUserForm" (ngSubmit)="onSubmit()">
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Empleado</mat-label>
+                        <mat-select formControlName="idEmpleado" disableRipple>
+                            <ng-template ngFor let-empleado [ngForOf]="listEmpleados">
+                                <mat-option value={{empleado.iD_Empleado}}>{{empleado.primer_Nombre}}  {{empleado.primer_Apellido}}</mat-option>
+                            </ng-template>
+                        </mat-select>
+                </mat-form-field></td>
+
+                <td><mat-form-field class="example-full-width accent">
+
+                        <mat-label>Role</mat-label>
+                        <mat-select formControlName="id_Role" disableRipple>
+                            <ng-template ngFor let-role [ngForOf]="listRoles">
+                                <mat-option value={{role.iD_Role}}>{{role.nombre}}</mat-option>
+                            </ng-template>
+                        </mat-select>
+                </mat-form-field></td>
+            </tr>
+        </table>
+
+
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+
+                <td><mat-form-field class="example-full-width">
+                        <mat-label>Contraseña</mat-label>
+                        <input  formControlName="password" matInput >
+                </mat-form-field></td>
+
+                <!-- <td><mat-form-field class="example-full-width">
+                    <mat-label>Confirmar Contraseña</mat-label>
+                    <input  formControlName="ConfirPassword" matInput >
+                </mat-form-field></td> -->
+
+                <td><mat-form-field class="example-full-width">
+                    <mat-label >Email</mat-label>
+                    <input matInput formControlName="email" matInput >
+                </mat-form-field></td>
+
+            </tr>
+        </table>
+
+
+
+
+
+
+
+        <mat-dialog-actions align="end">
+            <button mat-button mat-dialog-close>Cancelar</button>
+            <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial
+                class="btn-registrar">Registrar</button>
+        </mat-dialog-actions>
+
+    </form>
+</mat-dialog-content>

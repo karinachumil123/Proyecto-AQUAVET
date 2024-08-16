@@ -1,0 +1,95 @@
+<div class="container-xxl">
+    <app-navbar-top></app-navbar-top>
+
+    <div class="wrapper">
+        <div class="PositionFixed">
+
+            <p class="Titule-Menu"></p>
+
+                <ul class="navbar-nav">
+
+                    <ng-template ngFor let-categoria [ngForOf]="categoriaServicios" >
+                        <li class="nav-item" (click)="GetServicesByCategory(categoria.ID_Categoria)" >
+                            <a class="nav-link"  [ngClass]="{'active': categoria.ID_Categoria === selectedCategoryId}">
+                                <div class="wrapper-link">
+                                    <p>{{categoria.Nombre}}</p>
+                                    <img class="iconPata" src="../../../assets/icon/iconPata.svg" alt="">
+                                </div>
+                            </a>
+                        </li>
+                    </ng-template>
+                </ul>
+        </div>
+
+
+        <div class="wrapper-content">
+
+            <div class="wrapper-navBuscador">
+
+
+                    <div class="container-inputsearch">
+                        <p class="titulo-categoriaServicio">{{getNameCategorySelected()?.Nombre}}</p>
+
+                        <div class="wrapper-buscador">
+                            <input class="input" type="text" [formControl] ="searchControl" >
+                            <img  class="icon-search" src="../../../assets/icon/iconSearch.svg" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="wrapper-resultQuery" *ngIf="serviciosQuery.length > 0">
+                        <div class="container-resultsQuery">
+                            <ng-template ngFor let-servicio [ngForOf]="serviciosQuery">
+                                <p class="nombre-servicioQuery">{{servicio.Nombre}}</p>
+                            </ng-template>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="wrapper-categoDefinicion">
+                <p  class="category-defincion">
+                    La clínica veterinaria AQUAVET ofrece atención en una especialidad médica dedicada a corregir o a evitar las deformidades o los traumas del sistema músculo esquelético de cada mascota, por medio de cirugía ortopédica, aparatos como ortesis y/o ejercicios corporales.
+
+                    Aparte del talento profesional se cuenta con equipos y diagnósticos acordes para tratamientos efectivos como radiografías, citologías, biopsias, y los que se requieran para cada caso. La clínica AQUAVET cuenta con el personal y la casuística para realizar todas las cirugías ortopédicas requeridas en el medio, luego de establecer un diagnóstico correcto y oportuno.
+                </p>
+                <div>
+                    <img src="../../../assets/img/dog.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="wrapper-serviciosInfo">
+                <div class="wrapper-titulesServices wrapper-tableServices">
+                    <p>Servicios</p>
+                    <p>Mascotas</p>
+                </div>
+
+                <div class="wrapper-infroServicios">
+
+                    <ng-template ngFor let-servicio [ngForOf]="servicios">
+                        <div class="wrapper-infoServicio wrapper-tableServices">
+                            <p>{{servicio.Nombre}}</p>
+                            
+                            <div>
+                                <!-- <ng-template ngFor let-especies [ngForOf]="servicio.Especies">
+                                    <p>Perro</p>
+                                </ng-template> -->
+                                <p>Perro, Gato, Conejo, Pajaro</p>
+                            </div>
+
+                        </div>
+                    </ng-template>
+  
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    
+</div>
+
+

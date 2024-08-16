@@ -1,0 +1,51 @@
+<div class="wrapper">
+    <p class="titulo">Lista de Usuarios</p>
+    <div class="container-btnAgregar">
+
+        <button class="btn-agregar" (click)="openDialogCreate()">
+            Agregar Usuario
+        </button>
+
+    </div>
+
+    <div class="container-btns">
+        <div class="btns">
+            <button class="btn-reporte">Reportes</button>
+            <div class="input-search">
+                <input type="text">
+                <img src="../../../assets/icon/iconSearch.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrapper-serviciosInfo">
+        <div class="wrapper-titulesServices wrapper-tableServices">
+            <p>ID</p>
+            <p>Correo</p>
+            <p>Ultima session</p>
+            <p>Role</p>
+            <p>Empleado</p>
+            <p>Elimnar</p>
+        </div>
+
+        <div class="wrapper-infroServicios">
+
+            <ng-template ngFor let-user [ngForOf]="listUsers">
+                <div class="wrapper-infoServicio wrapper-tableServices">
+                    <p>{{user.id}}</p>
+                    <p>{{user.email}}</p>
+                    <p>{{user.ultimaSession | date:'short' }}</p>
+                    <p>{{user.role}}</p>
+                    <p>{{user.nombre}}</p>
+
+                    
+                    <app-btn-eliminar (click)="deleteUser(user.id)"></app-btn-eliminar>
+                    
+                </div>
+            </ng-template>
+        </div>
+    </div>
+
+
+</div>

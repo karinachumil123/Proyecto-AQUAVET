@@ -1,0 +1,84 @@
+.wrapper{
+    .titulo{
+        font-size: 1.5rem;
+        color: #5D7599;
+        font-family: 'PoppinsBold';
+    }
+
+    .container-btnAgregar{
+        display: flex;
+        justify-content: flex-end;
+        .btn-agregar{
+            color: #FFFFFF;
+            font-family: 'PoppinsBold';
+            font-size: 0.9rem;
+            background-color: #5183C0;
+            padding: 8px  15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+        
+    }
+
+    .container-btns{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+
+        .btns{
+            display: flex;
+            gap: 20px;
+
+            .btn-reporte{
+                padding: 0px 10px ;
+                background-color: #007EA7;
+                color: #F5F8FF;
+                font-family: 'PoppinsSemiBold';
+                border: none;
+                border-radius: 5px;
+                font-size: 0.9rem;
+                cursor: pointer;
+            }
+
+            .input-search{
+                display: flex;
+                background-color: #ffffff;
+                input{
+                    border: none;
+                    outline: none;
+                    padding: 5px;
+                }
+                img{
+                    width: 35px;
+                }
+            }
+        }
+    }
+
+    .wrapper-serviciosInfo{
+        padding-top: 10px;
+        border-radius: 10px;
+
+        .wrapper-tableServices{
+            display: grid;
+            grid-template-columns:45px 3fr 2fr 2fr 2fr 1fr;
+        }
+        .wrapper-titulesServices{
+            width: 100%;
+            background-color: #0082C7;
+            color: #FFFFFF;
+            padding: 15px 7px;
+            border-radius: 7px;
+            font-size: 0.9rem;
+            font-family: 'PoppinsBold';
+        }
+        .wrapper-infroServicios{
+            .wrapper-infoServicio{
+                padding: 10px;
+                font-family: 'PoppinsMedium';
+                font-size: 0.85rem;
+            }
+        }
+    }
+}

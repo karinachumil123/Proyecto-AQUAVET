@@ -1,0 +1,86 @@
+.container-xxl{
+    height: 100vh;
+    overflow: hidden;
+
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        height: 100vh;
+        background: rgb(36,31,0);
+        background: radial-gradient(circle, rgba(36,31,0,0.4990371148459384) 0%, rgba(9,113,121,0) 35%, rgba(0,212,255,1) 100%);
+        
+        
+        .contendor-titulo{
+            font-size: 70px;
+            font-family: 'PoppinsMedium';
+        }
+        .contenedor-padre{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .contenedor-informaciones{
+                font-size: 20px;
+                .frase{
+                    font-size: 35px;
+                    font-family: sans-serif;
+                    color: rgb(85, 9, 228);
+
+
+                }
+                .telefono{
+                    margin-top: 10px;
+                    font-size: 20px;
+                    font-family: sans-serif;
+                    color: rgb(7, 7, 7);
+                }
+                .correo{
+                    margin-top: 10px;
+                    font-family: sans-serif;
+                    font-size: 20px;
+                    color: rgb(5, 5, 5);
+                }
+                .direccion{
+                    margin-top: 10px;
+                    font-size: 20px;
+                    font-family: sans-serif;
+                    color: rgb(5, 5, 5);
+                }
+
+
+            }
+            .contenedor-imagen{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                .img-contacto{
+                    width: 100%;
+                    
+                }
+
+            }
+        }
+    } 
+
+
+    .positionFixed{
+        position: fixed;
+        bottom: 0px;
+
+        .contendor-icon{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            .icono-redes{
+                width: 50px;
+                cursor: pointer;
+            }
+        }
+    }
+
+}

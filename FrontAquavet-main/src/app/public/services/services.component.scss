@@ -1,0 +1,157 @@
+.container-xxl{
+    padding-top: 10px;
+
+    .wrapper{
+        display: grid;
+        grid-template-columns: 220px 1fr;
+
+        .PositionFixed{
+            position: fixed;
+            z-index: 10;
+            height: 100vh;
+            width: 190px;
+            padding: 80px 0;
+            .Titule-Menu{
+                text-align: center;
+                font-family: 'PoppinsBold';
+                color: #244583b7;
+                font-size: 1rem;
+            }
+
+            .navbar-nav {
+                list-style-type: none;
+                margin-top: 8px;
+                .nav-item{
+                    width: 100%;
+                    .nav-link {
+                        display: inline-block;
+                        color: #3d3d3d;
+                        text-decoration: none;
+                        font-family: 'PoppinsMedium';
+                        font-size: 0.81rem;
+                        padding: 8px 5px 8px 10px;
+                        width: 100%;
+                        cursor: pointer;
+                        
+                        .wrapper-link{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .iconPata{
+                                width: 30px;
+                            }
+                        }
+                    }
+
+                    .active {
+                        background-color:#003459a8 ;
+                        color: white ;
+                        border-radius: 8px;
+                    }
+                    
+                    .nav-link:hover {
+                        color: #808a91;
+                    }
+                }
+            }
+        }
+    
+        .wrapper-content{
+            padding: 80px 0;
+            grid-column: 2;
+
+            .wrapper-navBuscador{
+                display: flex;
+                gap: 70px;
+                align-items: center;
+                justify-content: flex-end;
+
+                .container-inputsearch{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                .titulo-categoriaServicio{
+                    color: #646464;
+                    font-family: 'PoppinsBold';
+                    font-size: 1.3rem;
+                }
+
+                .wrapper-buscador{
+                    display: flex;
+                    background-color: #f4f6f8;
+                    padding:  5px 10px;
+                    border-radius: 5px;
+
+                    .input{
+                        border: none ;
+                        background-color: #f4f6f8;
+                        outline: none;
+                        width: 250px;
+                        color: #636974;
+                        font-family: 'PoppinsMedium';
+                    }
+                    .icon-search{
+                        width: 30px;
+                    }
+                }
+                }
+
+                .wrapper-resultQuery{
+                    z-index: 0;
+                    top: 130px;
+                    position: fixed;
+                    background-color: rgb(238, 240, 241); 
+                    padding: 10px;
+                    width: 400px;
+
+                    .nombre-servicioQuery{
+                        padding: 5px;
+                        font-family: 'PoppinsRegular';
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+
+            .wrapper-categoDefinicion{
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+                gap: 10%;
+
+                .category-defincion{
+                    font-size: 0.8rem;
+                    font-family: 'PoppinsRegular';
+                    color: #3A3A3A;
+                    text-align: justify;
+                }
+            }
+
+            .wrapper-serviciosInfo{
+                background-color: #F3F5F8;
+                border-radius: 10px;
+                .wrapper-tableServices{
+                    display: grid;
+                    grid-template-columns: 5fr 2fr;
+                }
+                .wrapper-titulesServices{
+                    width: 100%;
+                    background-color: #5D7599;
+                    color: #FFFFFF;
+                    padding: 15px 7px;
+                    border-radius: 7px;
+                    font-size: 0.85rem;
+                    font-family: 'PoppinsRegular';
+                }
+                .wrapper-infroServicios{
+                    .wrapper-infoServicio{
+                        padding: 10px;
+                        font-family: 'PoppinsRegular';
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
